@@ -124,7 +124,7 @@ widgets: ## Seven widgets in sidebar provided: search, info, category, tag, rece
 
 info:
   avatar: /img/avatar.png
-  discription: To be a better man.
+  discription: Here to stay.
   outlinkitem:
     - name: twitter
       outlink: https://twitter.com/username
@@ -133,25 +133,23 @@ info:
       outlink: mailto:admin@domain.com
       message: Email
     - name: github
-      outlink: https://github.com/username
+      outlink: https://www.github.com/huscarter
       message: Github
     - name: rss
       outlink: /atom.xml
       message: RSS
 
 links:
-  - title: site-name1
-    url: http://www.example1.com/
-    src: https://www.example1.com/favicon.ico
-    desc: XXX's Blog
-  - title: site-name2
-    url: http://www.example2.com/
-    src: https://www.example1.com/favicon.ico
-    desc: YYY's Blog
-  - title: site-name3
-    url: http://www.example3.com/
-    src: https://www.example3.com/favicon.ico
-    desc: ZZZ's Blog
+  - title: favorites:konghy
+    url: https://blog.konghy.cn/
+  - title: favorites:ruanyf
+    url: http://www.ruanyifeng.com/blog/
+  - title: 廖雪峰
+    url : https://www.liaoxuefeng.com/
+  - title: 嘟嘟独立技术
+    url: http://tengj.top/
+  - title: hellogithub
+    url: https://hellogithub.com/
 
 timeline:
   - num: 1

@@ -120,7 +120,7 @@ github是开发人员的一个无价之宝，不仅提供了各种开源项目�
     git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant 
     // 安装渲染模块
     npm install hexo-renderer-pug --save
-    npm install hexo-renderer-sass --save
+    npm install hexo-renderer-sass --save （如果因为node版本过高安装失败，改用npm install hexo-renderer-sass-next --save）
     // 将站点_config.yml中的themes配置成你拉取的主题名称
     _config.yml-->theme: maupassant
     ```
