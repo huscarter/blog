@@ -161,6 +161,9 @@ div {
             li {
                 margin: 5px 0;
                 line-height: 1.5;
+                .wl-emoji{
+                    width: 16px;
+                }
             }
         }
         .category-list-count {
@@ -172,6 +175,18 @@ div {
         }
         .category-list-count::after {
             content: ")";
+        }
+        /* tiered display categories */
+        .category-list-child li {
+            margin-left: 0.6em !important;
+            padding-left: 1em;
+            position: relative;
+        }
+        .category-list-child li::before {
+            content: "-";
+            position: absolute;
+            top: 0;
+            left: 0;
         }
         .search-form {
             position: relative;
@@ -190,6 +205,22 @@ div {
                 -webkit-box-shadow: none;
                 -moz-box-shadow: none;
                 box-shadow: none;
+            }
+        }
+        .author-info {
+            text-align: center;
+            a.info-avatar {
+                img {
+                    border-radius: 50%;
+                    padding: 4px;
+                    width: 96px;
+                    height: 96px;
+                    background-color: transparent;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+                }
+            }
+            a.info-icon {
+                font-size: 25px;
             }
         }
     }
@@ -214,6 +245,19 @@ div {
         font: bold 25px/1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
         a {
             color: #555;
+        }
+        .top-post {
+            font-weight: 400;
+            height: 32px;
+            padding: 0 6px;
+            margin-right: 5px;
+            line-height: 32px;
+            font-size: 16px;
+            white-space: nowrap;
+            vertical-align: 2px;
+            color: #fff;
+            background-image: -webkit-linear-gradient(0deg, #3742fa 0, #a86af9  100%);
+            border-radius: 2px 6px;
         }
     }
     .post-meta {
@@ -641,6 +685,7 @@ screen and (min-width: 48em) {
 
 #process .timeline-centered {
     position: relative;
+    min-height: 14px;
     margin-bottom: 30px;
 }
 
@@ -842,9 +887,9 @@ screen and (min-width: 48em) {
     display: block;
     width: 4px;
     background: #eee;
-    top: -3%;
+    top: -18px;
     right: -30px;
-    bottom: -3%;
+    bottom: -8px;
 }
 
 #process .present,
@@ -877,7 +922,7 @@ screen and (min-width: 48em) {
 
 #process .present {
     position: absolute;
-    top: -3%;
+    top: -18px;
     right: 0;
     margin-top: -20px;
     line-height: 100%;
@@ -885,7 +930,7 @@ screen and (min-width: 48em) {
 
 #process .born {
     position: absolute;
-    bottom: -3%;
+    bottom: -8px;
     right: 0;
     margin-bottom: -20px;
     line-height: 100%;
@@ -893,7 +938,7 @@ screen and (min-width: 48em) {
 
 #process .dot_tp {
     position: absolute;
-    top: -3%;
+    top: -18px;
     right: -35px;
     background-color: transparent;
     height: 15px;
@@ -907,7 +952,7 @@ screen and (min-width: 48em) {
 
 #process .dot_bt {
     position: absolute;
-    bottom: -3%;
+    bottom: -8px;
     right: -35px;
     background-color: transparent;
     height: 15px;
@@ -1875,6 +1920,76 @@ em.search-keyword {
 }
 
 
+/* Footer Badge*/
+
+.github-badge {
+    display: inline-block;
+    border-radius: 4px;
+    text-shadow: none;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.25;
+    background-color: #ABBAC3;
+    margin-bottom: 5px;
+    a {
+      color: #fff;
+    }
+    img {
+      /*height: "calc(%s * 1.25)" % $fontsize-footnote*/
+      height: 1.25em;
+      vertical-align: top;
+    }
+    .badge-subject {
+      display: inline-block;
+      background-color: #555;
+      padding: 4px 4px 4px 6px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+    .badge-value {
+      display: inline-block;
+      padding: 4px 6px 4px 4px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    .bg-brightgreen {
+      background-color: #4c1 !important;
+    }
+    .bg-green {
+      background-color: #97ca00 !important;
+    }
+    .bg-yellowgreen {
+      background-color: #a4a61d !important;
+    }
+    .bg-orange {
+      background-color: #FE7D37 !important;
+    }
+    .bg-yellow {
+      background-color: #dfb317 !important;
+    }
+    .bg-blueviolet {
+      background-color: #8A2BE2 !important;
+    }
+    .bg-pink {
+      background-color: #FFC0CB !important;
+    }
+    .bg-red {
+      background-color: #e05d44 !important;
+    }
+    .bg-blue {
+      background-color: #007EC6 !important;
+    }
+    .bg-grey,
+    .bg-gray {
+      background-color: #555 !important;
+    }
+    .bg-lightgrey,
+    .bg-lightgray {
+      background-color: #9f9f9f !important;
+    }
+}
+
+
 /* Waline CSS*/
 
 #waline {
@@ -1950,4 +2065,85 @@ html[data-dark='true'] {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/* Links Layout*/
+
+.link-items {
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding: 0px 0.5rem;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 20px;
+    .link-item {
+        display: inline-flex;
+        --primary-color: #444;
+        .link-url {
+            display: inline-flex;
+            text-align: center;
+            justify-self: center;
+            line-height: 1.5;
+            width: 15rem;
+            color: var(--primary-color,#000);
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            transition: all 0.2s ease 0s;
+            .link-left {
+                display: inline-block;
+                line-height: 0;
+                .link-avatar {
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    transition: all 0.5s ease 0s;
+                }
+            }
+            .link-info {
+                padding-left: 0.6rem;
+                display: block;
+                .link-blog {
+                    font-size: 1.24rem;
+                    font-weight: 700;
+                    margin: 0.42rem 0px;
+                }
+                .link-desc {
+                    font-size: 0.8rem;
+                    font-weight: normal;
+                    margin-top: 0.5rem;
+                    width: 10.5rem;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+
+/* Recent-comments Waline Style*/
+
+.waline-comment-content {
+    margin: 6px;
+    padding: 6px;
+    border-radius: 6px;
+    p {
+        margin: 0;
+        display : -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; /*这里设置第几行显示省略号，可以设置第一行或者其他行*/
+    }
+}
+
+.waline-comment-content-author {
+    text-align: end;
+    margin-bottom: 6px;
 }
