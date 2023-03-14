@@ -181,7 +181,7 @@ github的博客访问网址都是https://[xxx].github.io的格式，如果你有
 1. github博客仓库绑定域名
 
    ```
-   github博客仓库 -> setting -> GitHubPages -> Customdomain ->输入域名[如www.huscarter.com]
+   github博客仓库 -> setting ->  Pages -> Customdomain ->输入域名[如www.huscarter.com]
    ```
 
 2. hexo本地博客添加CNAME文件
