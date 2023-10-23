@@ -55,6 +55,15 @@ git clone git://github.com/schacon/grit.git [mygrit]
 git clone [-b mygrit] git://github.com/schacon/grit.git
 ```
 
+#### 更新
+```
+git fetch // 同步远端仓库到本地仓库
+git fetch origin xxx // 同步指定远端仓库分支到本地仓库
+git pull // 同步远端仓库到本地仓库和工作空间
+git pull origin xxx// 同步远端仓库指定分支到本地仓库和工作空间,git pull = git fecth + git merge
+git remote update --prune // 同步远端分支信息到本地仓库
+```
+
 #### 提交代码到分支
 ```
 git status // 查看代码的修改状态
