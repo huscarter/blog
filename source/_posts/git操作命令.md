@@ -70,6 +70,8 @@ git status // 查看代码的修改状态
 git add . // 暂存所有提交的文件
 git restore --staged <file> // 放弃修改还原文件
 git rm --cached <file> // 删除已经add到暂存区的文件（不会物理删除的，只是变成未add的修改状态）
+git stash // 暂存当前操作
+git stash pop // 将暂存还原
 git commit // 提交已暂存的文件
 git pull // 先同步服务器最新代码到本地
 git push origin <本地分支名> // 再同步到服务器
