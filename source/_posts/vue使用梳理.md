@@ -309,6 +309,31 @@ npm run dev
 ### es6方法
 [es6常用方法](/web/es6常用方法)
 
+### vue使用问题集
+1. 有时按浏览器返回url发生了变化，但是页面没有发生变化
+原因：
+解决：
+```
+// 解决浏览器偶尔返回失效的问题
+window.addEventListener('hashchange', () => {
+  const currentPath = window.location.hash.slice(1)
+  if (this.$route.path !== currentPath) {
+    this.$router.push(currentPath)
+  }
+}, false)
+```
+
+2. 通一个页面，通过修改url参数，页面不会更新
+原因：vue-router同一个页面地址栏参数改变，不会出发页面的create钩子函数。
+解决：
+1. 第一种：页面watch route.query
+2. 第二种：通过给router-view设置key。（比较推荐 ）
+```
+router-view(:key="routeKey")
+computed: {
+  routeKey() { return this.$route.path + (new Date().getTime()) }
+},
+```
 PS: 参考
 [Vue语法|菜鸟教学](https://www.runoob.com/vue2/vue-template-syntax.html)
 
