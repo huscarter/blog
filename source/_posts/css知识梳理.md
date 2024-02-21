@@ -579,6 +579,12 @@ top: 50px; // 位置
 left:100px; // 位置
 ```
 
+### 过滤型阴影
+```
+filter: drop-shadow(0px 0px 10px #000); // 过滤型阴影
+box-shadow: 0px 0px 10px #000; // 阴影
+```
+
 ### 小程序.文本自动换行错乱问题
 
 ```
@@ -593,7 +599,6 @@ display: flex;
 align-items: center;
 justify-content: center; // 设置垂直居中
 ```
-
 
 
 ## 参考
