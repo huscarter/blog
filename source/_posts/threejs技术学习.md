@@ -3,8 +3,8 @@ title: threejs技术学习
 date: 2023-09-18 20:01:01
 categories: web
 tags:
-     - vue
-description:threejs技术学习，为实现数字孪生实现技术支持。
+     - threejs
+description: threejs技术学习，为实现数字孪生实现技术支持。
 ---
 
 ## threejs技术学习点
