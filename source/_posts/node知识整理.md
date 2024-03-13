@@ -11,6 +11,7 @@ description: node知识整理。
 
 ## node安装
 ### node管理工具
+注意如果系统里已经安装了node，想通过n/nvm管理node版本。需要将系统的node卸载掉，然后再安装n/nvm，否则会出现环境冲突（比如npm版本不匹配）。
 1. n
 ```
 // 安装n
